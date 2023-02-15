@@ -1,0 +1,52 @@
+img{
+    height: 466px;
+    width: 400px;
+    margin-left: 38px;
+}
+
+.escolher{
+    background-color: #27ae60;
+    width: 200px;
+    height: 60px;
+    margin-right: 53px;
+    border-radius: 5px;
+}
+
+.escolher p{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.superior{
+    margin-top: 59px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.letras{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 664px;
+    height: 91px;
+    margin: 0 auto;
+    gap:11px ;
+}
+
+.letras button{
+    width: 40px;
+    height: 40px;
+    background-color: #9faab5;
+    border-radius: 3px;
+    border: 1px;
+}
+
+.letras button p{
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #7aa7c7;
+}
