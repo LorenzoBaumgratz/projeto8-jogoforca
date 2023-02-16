@@ -39,9 +39,9 @@ img{
 .letras button{
     width: 40px;
     height: 40px;
-    background-color: #9faab5;
     border-radius: 3px;
-    border: 1px;
+    border: 1px solid #7aa7c7;
+    background-color: #e1ecf4;
 }
 
 .letras button p{
@@ -49,4 +49,24 @@ img{
     font-size: 16px;
     text-align: center;
     color: #7aa7c7;
+}
+
+.linhas{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.direita{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.linha{
+    font-weight: 700;
+    font-size: 50px;
+}
+
+button:disabled{
+    background-color: #9faab5;
 }
