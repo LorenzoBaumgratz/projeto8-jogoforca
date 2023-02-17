@@ -10,13 +10,15 @@ export default function Jogo(props) {
 
     function escolherPalavra() {
 
-        props.setPal(props.palavra[Math.floor(Math.random() * props.palavra.length)]);
-        console.log(Array.from(props.Pal));
-        console.log(props.Pal);
+        props.setpalavraEscolhida(props.palavra[Math.floor(Math.random() * props.palavra.length)]);
+        console.log(Array.from(props.palavraEscolhida));
+        console.log(props.palavraEscolhida);
+        props.setBotao(false);
         // if(prompt("PALAVRA")===props.Pal)
         // console.log("acertou")
     }
-
+        console.log(Array.from(props.palavraEscolhida));
+        console.log(props.palavraEscolhida);
 
     return (
         <div className="jogo">
@@ -27,7 +29,7 @@ export default function Jogo(props) {
                         <p onClick={() => escolherPalavra()}>Escolher Palavra</p>
                     </div>
                     <div className="linhas">
-                        {Array.from(props.Pal).map(() => <div className="linha">-</div>)}
+                        {Array.from(props.palavraEscolhida).map(() => <div className="linha">-</div>)}
                     </div>
                 </div>
             </div>

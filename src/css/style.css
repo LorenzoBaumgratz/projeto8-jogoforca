@@ -70,3 +70,7 @@ img{
 button:disabled{
     background-color: #9faab5;
 }
+
+.jogo{
+    margin-bottom: 70px;
+}
