@@ -1,76 +1,87 @@
-img{
-    height: 466px;
-    width: 400px;
-    margin-left: 38px;
+img {
+  height: 466px;
+  width: 400px;
+  margin-left: 38px;
 }
 
-.escolher{
-    background-color: #27ae60;
-    width: 200px;
-    height: 60px;
-    margin-right: 53px;
-    border-radius: 5px;
+.escolher {
+  background-color: #27ae60;
+  width: 200px;
+  height: 60px;
+  margin-right: 53px;
+  border-radius: 5px;
 }
 
-.escolher p{
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 60px;
+.escolher p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
 }
 
-.superior{
-    margin-top: 59px;
-    display: flex;
-    justify-content: space-between;
+.superior {
+  margin-top: 59px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.letras{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 664px;
-    height: 91px;
-    margin: 0 auto;
-    gap:11px ;
+.letras {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 664px;
+  height: 91px;
+  margin: 0 auto;
+  gap: 11px;
 }
 
-.letras button{
-    width: 40px;
-    height: 40px;
-    border-radius: 3px;
-    border: 1px solid #7aa7c7;
-    background-color: #e1ecf4;
+.letras button {
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  background-color: #e1ecf4;
 }
 
-.letras button p{
-    font-weight: 700;
-    font-size: 16px;
-    text-align: center;
-    color: #7aa7c7;
+.letras button p {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #7aa7c7;
 }
 
-.linhas{
-    display: flex;
-    margin-bottom: 50px;
+.linhas {
+  display: flex;
+  margin-bottom: 50px;
+  letter-spacing: 1em;
+  margin-right: 53px;
 }
 
-.direita{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.direita {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.linha{
-    font-weight: 700;
-    font-size: 50px;
+.linha {
+  font-weight: 700;
+  font-size: 50px;
 }
 
-button:disabled{
-    background-color: #9faab5;
+button:disabled {
+  background-color: #9faab5;
 }
 
-.jogo{
-    margin-bottom: 70px;
+.jogo {
+  margin-bottom: 70px;
+}
+
+.verde{
+    color: #27ae60;
+}
+
+.vermelho{
+    color: #FF0000;
 }
