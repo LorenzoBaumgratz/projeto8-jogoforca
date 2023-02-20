@@ -9,7 +9,7 @@ import forca6 from "../assets/assets/forca6.png"
 export default function Jogo(props) {
     const imgsforca = [forca0, forca1, forca2, forca3, forca4, forca5, forca6];
     function escolherPalavra() {
-        if (props.fim) {
+        if (props.fim || props.erros === 6) {
             window.location.reload(true);
         } else {
             props.setpalavraEscolhida(props.palavra[Math.floor(Math.random() * props.palavra.length)]);
@@ -25,14 +25,20 @@ export default function Jogo(props) {
         const res = arr.filter(function (item) { return !props.letrasEscolhida.includes(item) });
         if (res.length === 0) {
             props.setFim(true)
+            console.log("palavra escolhida", props.palavraEscolhida)
         }
 
+        if(props.erros===6){
+            for(let i=0;i<props.palavraEscolhida.length;i++){
+               props.letrasEscolhida.push(arr[i]);
+               props.setFim(true) //FUNCIONA?
+            }
+        }
     }
 
     function contem(index) {
         for (let i = 0; i < props.letrasEscolhida.length; i++) {
             if (Array.from(props.palavraEscolhida[index]) == (props.letrasEscolhida[i])) {
-                console.log("filter", Array.from(props.palavraEscolhida).filter(item => !props.letrasEscolhida.includes(item)) === [])
                 fim();
                 return true;
             }

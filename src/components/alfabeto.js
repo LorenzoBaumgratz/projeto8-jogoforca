@@ -21,6 +21,6 @@ export default function Alfabeto(props) {
     }
 
     return (
-        <button disabled={(props.palavraEscolhida ? (props.letrasEscolhida.includes(props.letra) ? true : false) : true)} onClick={() => selecionarLetra(props.letra)}> <p>{props.letra}</p></button>
+        <button disabled={(props.palavraEscolhida && props.fim === false ? (props.letrasEscolhida.includes(props.letra) ? true : false) : true)} onClick={() => selecionarLetra(props.letra)}> <p>{props.letra}</p></button>
     )
 }
