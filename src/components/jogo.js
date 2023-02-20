@@ -9,19 +9,31 @@ import forca6 from "../assets/assets/forca6.png"
 export default function Jogo(props) {
     const imgsforca = [forca0, forca1, forca2, forca3, forca4, forca5, forca6];
     function escolherPalavra() {
-
-        props.setpalavraEscolhida(props.palavra[Math.floor(Math.random() * props.palavra.length)]);
-        console.log(Array.from(props.palavraEscolhida));
-        console.log(props.palavraEscolhida);
-        // if(prompt("PALAVRA")===props.Pal)
-        // console.log("acertou")
+        if (props.fim) {
+            window.location.reload(true);
+        } else {
+            props.setpalavraEscolhida(props.palavra[Math.floor(Math.random() * props.palavra.length)]);
+            console.log(Array.from(props.palavraEscolhida));
+            console.log(props.palavraEscolhida);
+        }
     }
     console.log(Array.from(props.palavraEscolhida));
     console.log(props.palavraEscolhida);
 
+    function fim() {
+        const arr = Array.from(props.palavraEscolhida);
+        const res = arr.filter(function (item) { return !props.letrasEscolhida.includes(item) });
+        if (res.length === 0) {
+            props.setFim(true)
+        }
+
+    }
+
     function contem(index) {
         for (let i = 0; i < props.letrasEscolhida.length; i++) {
             if (Array.from(props.palavraEscolhida[index]) == (props.letrasEscolhida[i])) {
+                console.log("filter", Array.from(props.palavraEscolhida).filter(item => !props.letrasEscolhida.includes(item)) === [])
+                fim();
                 return true;
             }
         }
@@ -36,7 +48,7 @@ export default function Jogo(props) {
                         <p onClick={() => escolherPalavra()}>Escolher Palavra</p>
                     </div>
                     <div className="linhas">
-                        {Array.from(props.palavraEscolhida).map((a, index) => <div className={`linha ${(props.fim)? "verde": "vermelho"}`}>{(contem(index)) ? `${Array.from(props.palavraEscolhida)[index]}` : "_"}</div>)}
+                        {Array.from(props.palavraEscolhida).map((a, index) => <div className={`linha ${(props.fim === true || props.erros === 6) ? (props.erros === 6 ? "vermelho" : "verde") : ""}`}>{(contem(index)) ? `${Array.from(props.palavraEscolhida)[index]}` : "_"}</div>)}
                     </div>
                 </div>
             </div>
