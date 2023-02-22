@@ -1,5 +1,5 @@
 export default function Alfabeto(props) {
-    const c = Array.from(props.palavraEscolhida);
+    let c = Array.from(props.palavraEscolhida);
 
 
 
