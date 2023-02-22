@@ -9,10 +9,15 @@ import forca6 from "../assets/assets/forca6.png"
 export default function Jogo(props) {
     const imgsforca = [forca0, forca1, forca2, forca3, forca4, forca5, forca6];
     function escolherPalavra() {
+        props.setpalavraEscolhida(props.palavra[Math.floor(Math.random() * props.palavra.length)]);
         if (props.fim || props.erros === 6) {
-            window.location.reload(true);
+            props.setErros(0);
+            props.setLetrasEscolhida([]);
+            props.setFim(false)
+            
+            //window.location.reload(true);
         } else {
-            props.setpalavraEscolhida(props.palavra[Math.floor(Math.random() * props.palavra.length)]);
+
             console.log(Array.from(props.palavraEscolhida));
             console.log(props.palavraEscolhida);
         }
@@ -28,10 +33,10 @@ export default function Jogo(props) {
             console.log("palavra escolhida", props.palavraEscolhida)
         }
 
-        if(props.erros===6){
-            for(let i=0;i<props.palavraEscolhida.length;i++){
-               props.letrasEscolhida.push(arr[i]);
-               props.setFim(true) //FUNCIONA?
+        if (props.erros === 6) {
+            for (let i = 0; i < props.palavraEscolhida.length; i++) {
+                props.letrasEscolhida.push(arr[i]);
+                props.setFim(true)
             }
         }
     }
