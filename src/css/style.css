@@ -10,14 +10,12 @@ img {
   height: 60px;
   margin-right: 53px;
   border-radius: 5px;
-}
-
-.escolher p {
   text-align: center;
   color: white;
   font-size: 20px;
   font-weight: 700;
   line-height: 60px;
+  border: none;
 }
 
 .superior {

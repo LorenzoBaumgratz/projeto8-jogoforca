@@ -48,12 +48,12 @@ export default function Jogo(props) {
     return (
         <div className="jogo">
             <div className="superior">
-                <img src={imgsforca[props.erros]} alt={`forca${props.erros}`} />
+                <img data-test="game-image" src={imgsforca[props.erros]} alt={`forca${props.erros}`} />
                 <div className="direita">
-                    <div className="escolher">
-                        <p onClick={() => escolherPalavra()}>Escolher Palavra</p>
-                    </div>
-                    <div className="linhas">
+                    <button data-test="choose-word" className="escolher" onClick={() => escolherPalavra()}>
+                        Escolher Palavra
+                    </button>
+                    <div className="linhas" data-test="word">
                         {Array.from(props.palavraEscolhida).map((a, index) => <div className={`linha ${(props.fim === true || props.erros === 6) ? (props.erros === 6 ? "vermelho" : "verde") : ""}`}>{(contem(index)) ? `${Array.from(props.palavraEscolhida)[index]}` : "_"}</div>)}
                     </div>
                 </div>
