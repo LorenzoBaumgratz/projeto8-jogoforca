@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       <Jogo palavra={palavras} setpalavraEscolhida={setpalavraEscolhida} palavraEscolhida={palavraEscolhida} erros={erros} setErros={setErros} setLetrasEscolhida={setLetrasEscolhida} letrasEscolhida={letrasEscolhida} fim={fim} setFim={setFim}/>
-      <Letras palavraEscolhida={palavraEscolhida} letrasEscolhida={letrasEscolhida} setLetrasEscolhida={setLetrasEscolhida} erros={erros} setErros={setErros} fim={fim}/>
+      <Letras palavraEscolhida={palavraEscolhida} letrasEscolhida={letrasEscolhida} setLetrasEscolhida={setLetrasEscolhida} erros={erros} setErros={setErros} fim={fim} setFim={setFim}/>
     </>
   );
 }

@@ -30,7 +30,6 @@ img {
   flex-wrap: wrap;
   width: 664px;
   height: 91px;
-  margin: 0 auto;
   gap: 11px;
 }
 
@@ -42,7 +41,7 @@ img {
   background-color: #e1ecf4;
 }
 
-.letras button p {
+button p {
   font-weight: 700;
   font-size: 16px;
   text-align: center;
@@ -82,4 +81,36 @@ button:disabled {
 
 .vermelho{
     color: #FF0000;
+}
+
+.chute{
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.chute button{
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  background-color: #e1ecf4;
+}
+
+.baixo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+input{
+  width: 353px;
+  height: 40px;
+  border: 1px solid #cccccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
 }
